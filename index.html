@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valict | Coming Soon</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            deep: '#163152',
+                            neon: '#1eb59b',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            /* منع السكرول الجانبي تماماً */
+            overflow-x: hidden; 
+        }
+        .bg-mesh {
+            background: radial-gradient(circle at 50% 50%, #163152 0%, #0f172a 100%);
+        }
+    </style>
+</head>
+<body class="bg-mesh min-h-screen flex items-center justify-center text-white antialiased font-sans p-4 relative">
+
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 md:left-1/4 w-64 h-64 md:w-96 md:h-96 bg-brand-neon/10 rounded-full filter blur-[80px] md:blur-[100px] animate-pulse-slow"></div>
+    <div class="absolute bottom-1/4 left-1/2 -translate-x-1/2 md:right-1/4 w-64 h-64 md:w-96 md:h-96 bg-brand-deep/40 rounded-full filter blur-[80px] md:blur-[100px] animate-pulse-slow" style="animation-delay: 3s;"></div>
+
+    <div class="relative z-10 text-center w-full max-w-4xl mx-auto">
+        
+        <div class="mb-6 md:mb-8 flex flex-col items-center animate-float">
+            <div class="relative mb-3 md:mb-4">
+                <svg class="w-16 h-16 md:w-20 md:h-20 text-brand-neon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <div class="absolute inset-0 bg-brand-neon/20 blur-xl rounded-full"></div>
+            </div>
+            
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-white">
+                Val<span class="text-brand-neon">ict</span>
+            </h1>
+            
+            <div class="h-1 w-16 md:w-24 bg-gradient-to-r from-transparent via-brand-neon to-transparent mt-3 md:mt-4"></div>
+        </div>
+
+        <p class="text-[10px] md:text-sm font-medium tracking-[0.3em] md:tracking-[0.5em] uppercase text-brand-neon/80 mb-8 md:mb-12 px-2">
+            Innovate • Connect • Thrive
+        </p>
+
+        <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight px-2">
+            Setting Up Our <br class="hidden sm:block">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-neon to-white">Digital Infrastructure</span>
+        </h2>
+
+        <p class="text-slate-400 text-base md:text-xl max-w-xl md:max-w-2xl mx-auto font-light leading-relaxed px-4">
+            Our team is currently building a high-end IT platform. 
+            <span class="block mt-2">We are coming back shortly with something powerful.</span>
+        </p>
+
+        <div class="mt-12 md:mt-16 flex items-center justify-center gap-3">
+            <span class="relative flex h-2.5 w-2.5 md:h-3 md:w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-neon opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 md:h-3 md:w-3 bg-brand-neon"></span>
+            </span>
+            <span class="text-[10px] md:text-xs font-bold tracking-widest text-slate-500 uppercase">System Deployment in Progress</span>
+        </div>
+
+    </div>
+
+    <div class="absolute bottom-6 md:bottom-8 w-full text-center px-4">
+        <p class="text-slate-600 text-[9px] md:text-xs font-medium uppercase tracking-widest leading-loose">
+            &copy; 2026 Valict IT Facilities. <br class="sm:hidden"> All Rights Reserved.
+        </p>
+    </div>
+
+</body>
+</html>
